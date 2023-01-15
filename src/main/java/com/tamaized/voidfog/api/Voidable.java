@@ -38,9 +38,7 @@ public interface Voidable {
             return false;
         }
 
-        return world.isClient
-            && ((ClientWorld)world).getLevelProperties().getSkyDarknessHeight(world) != 0
-            && !world.getDimension().hasCeiling();
+        return true
     }
 
     default boolean isVoidFogDisabled(Entity player, World world) {
